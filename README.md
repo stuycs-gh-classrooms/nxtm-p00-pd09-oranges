@@ -31,18 +31,17 @@ All projects will require the following:
 
 ### Forumla
 What is the formula for your force? Including descriptions/definitions for the symbols. (You may include a picture of the formula if it is not easily typed.)
-
-YOUR ANSWER HERE
-
+F = qvBsin(theta)
+F = force, q = charge, v = velocity, B = magnetic field strength, sin(theta) = angle
 ### Custom Force
 - What information that is already present in the `Orb` or `OrbNode` classes does this force use?
-  - YOUR ANSWER HERE
+  - Velocity, applyForce
 
 - Does this force require any new constants, if so what are they and what values will you try initially?
-  - YOUR ANSWER HERE
+  - Yes, we will need q for charge, B for magentic field strength, and angle. q will be a range 
 
 - Does this force require any new information to be added to the `Orb` class? If so, what is it and what data type will you use?
-  - YOUR ANSWER HERE
+  - Yes, we will need a charge for each orb, the angle at which each orb is moving, and the magnetic field strength of the fixedOrb.
 
 - Does this force interact with other `Orbs`, or is it applied based on the environment?
   - YOUR ANSWER HERE
@@ -55,7 +54,7 @@ YOUR ANSWER HERE
 ### Simulation 1: Gravity
 Describe how you will attempt to simulate orbital motion.
 
---- 
+--- Create a fixed orb that all the other orbs will orbit. The formula will have the fixed orb as one object and the orb doing the orbiting as the other. According to the formula, if the distance between the orb and the fixed orb is smaller, it will orbit closer because the force is stronger.
 
 ### Simulation 2: Spring
 Describe what your spring simulation will look like. Explain how it will be setup, and how it should behave while running.
