@@ -27,8 +27,7 @@ All projects will require the following:
 ## Phase 0: Force Selection, Analysis & Plan
 ---------- 
 
-#### Custom Force: NAME OF YOUR FORCE
-
+#### Custom Force: Magentic force
 ### Forumla
 What is the formula for your force? Including descriptions/definitions for the symbols. (You may include a picture of the formula if it is not easily typed.)
 F = qvBsin(theta)
@@ -68,10 +67,10 @@ Describe how you will attempt to simulate orbital motion.
 
 --- Create a fixed orb that all the other orbs will orbit. The formula will have the fixed orb as one object and the orb doing the orbiting as the other. According to the formula, if the distance between the orb and the fixed orb is smaller, it will orbit closer because the force is stronger.
 
--A fixed "earth" orb exerts gravity on moving orbs.
--The force follows Newton’s law of universal gravitation.
--Orbs will orbit if initial velocity is properly set.
--Expected behavior: Orbs accelerate towards the fixed orb, creating elliptical orbits if initial conditions are right.
+--A fixed "earth" orb exerts gravity on moving orbs.
+--The force follows Newton’s law of universal gravitation.
+--Orbs will orbit if initial velocity is properly set.
+--Expected behavior: Orbs accelerate towards the fixed orb, creating elliptical orbits if initial conditions are right.
 
 ### Simulation 2: Spring
 Describe what your spring simulation will look like. Explain how it will be setup, and how it should behave while running.
