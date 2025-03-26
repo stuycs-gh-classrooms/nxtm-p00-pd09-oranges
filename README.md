@@ -104,5 +104,7 @@ Describe what your Custom force simulation will look like. Explain how it will b
 ### Simulation 5: Combination
 Describe what your combination simulation will look like. Explain how it will be setup, and how it should behave while running.
 
-YOUR ANSWER HERE
+- There will be multiple orbs and one fixed orb.
+- Gravity, drag, and spring will be utilized.
+- We expect orbs to move towards the fixed orb while oscillating back and forth between orbs and slowly decelerate. Once the optimal velocity is reached, the orbs will begin orbiting the fixed orb.
 
