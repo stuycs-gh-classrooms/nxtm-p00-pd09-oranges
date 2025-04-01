@@ -1,11 +1,15 @@
 /* ===================================
  Keyboard commands:
- 1: Create a new list of orbs in a line.
- 2: Create a new list of random orbs.
+ 1: Gravitational
+ 2: Spring
+ 3: Drag
+ 4: Magnetic
+ 5: Combination
+ 6: Randomize the orbs
  =: add a new node to the front of the list
  -: remove the node at the front
  SPACE: Toggle moving on/off
- g: Toggle earth gravity on/off
+ b: Toggle bounce on/off
  
  Mouse Commands:
  mousePressed: if the mouse is over an
