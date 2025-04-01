@@ -2,7 +2,7 @@
 ## Project 00
 ### NeXTCS
 ### Period: 9
-## Name0: ASNA RAHMAN
+## Name0: Asna Rahman
 ## Name1: Aahan Shah    
 ## Name2: Dickson Jiang 
 ---
