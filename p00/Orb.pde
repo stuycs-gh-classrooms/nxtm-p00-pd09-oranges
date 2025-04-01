@@ -70,12 +70,14 @@ class Orb {
     force.mult(strength);
     return force;
   }
- /* 
-  PVector getMagneticForce(float current) {
-    
+ 
+  PVector getMagneticForce(FixedOrb o, float current) {
+    float strength = q * velocity;
+    float angle = atan(abs(y - o.y)/(abs(x-o.x)));
+    strength = strength * sin(angle);
+    return strength;
   }
     
-*/
   //spring force between calling orb and other
   PVector getSpring(Orb other, int springLength, float springK) {
     PVector direction = PVector.sub(other.center, this.center);
