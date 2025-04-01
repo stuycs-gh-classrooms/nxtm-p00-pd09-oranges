@@ -60,9 +60,9 @@ void draw() {
       slinky.applyGravity(earth, G_CONSTANT);
     }
     
-    if (toggles[DRAGF]) {
+/*   if (toggles[DRAGF]) {
       slinky.applyDragForce(D_COEF);
-    }
+    }*/
     
     slinky.run(toggles[BOUNCE]);
   }//moving
