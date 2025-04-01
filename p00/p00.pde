@@ -31,19 +31,15 @@ int GRAVITY = 2;
 int SPRING = 3;
 int DRAGF = 4;
 int MAGNETIC = 5;
-
-boolean[] toggles = new boolean[6];
-String[] modes = {"Moving", "Bounce", "Gravity", "Spring", "Drag", "Magnetic"};
-
-String[] sims = {"Gravitational Orbit", "Spring", "Drag", "Magnetic Field", "Combination"};
-int currentSim;
-  
+int RANDOM = 6;
+boolean[] toggles = new boolean[7];
+String[] modes = {"Moving", "Bounce", "Gravity", "Spring", "Drag", "Magnetic", "Random Orbs"};
 FixedOrb earth;
 
 OrbList slinky;
 
 void setup() {
-  size(1000, 1000);
+  size(800, 800);
   CURRENT = 15;// Unit is made up Amperes.
   earth = new FixedOrb(width/2, height/2, 2*MAX_SIZE, 2*MAX_MASS);
   gravSim = false;
@@ -62,23 +58,18 @@ void draw() {
   slinky.run(toggles[BOUNCE]);
   if (toggles[MOVING]) {
     if (gravSim) {
-      currentSim = 0;
       earth.display();
       slinky.applyGravity(earth, G_CONSTANT);
     }
     if (springSim) {
-      currentSim = 1;
       slinky.applySprings(SPRING_LENGTH, SPRING_K);
     }
     if (dragSim) {
-      currentSim = 2;
       slinky.applyDragForce(D_COEF);
     }
     if (magneticSim) {
-      currentSim = 3;
     }
     if (comboSim) {
-      currentSim = 4;
       slinky.applyGravity(earth, G_CONSTANT);
       slinky.applySprings(SPRING_LENGTH, SPRING_K);
       slinky.applyDragForce(D_COEF);
@@ -106,11 +97,8 @@ void keyPressed() {
   if (key == '-') {
     slinky.removeFront();
   }
-  if (key == '8') {
-    slinky.populate(NUM_ORBS, true);
-  }
-  if (key == '9') {
-    slinky.populate(NUM_ORBS, false);
+  if (key == '6') {
+    toggles[RANDOM] = !toggles[RANDOM];
   }
   //Simulations
   //------
@@ -135,7 +123,7 @@ void keyPressed() {
     comboSim = !comboSim;
     toggles[GRAVITY] = !toggles[GRAVITY];
     toggles[SPRING] = !toggles[SPRING];
-    toggles[MAGNETIC] = !toggles[MAGNETIC];
+    toggles[DRAGF] = !toggles[DRAGF];
   }
   if (keyCode == UP) {
     CURRENT++;
