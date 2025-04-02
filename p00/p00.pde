@@ -65,6 +65,7 @@ void draw() {
       slinky.applySprings(SPRING_LENGTH, SPRING_K);
     }
     if (toggles[DRAGF]) {
+      slinky.applyGravity(earth, G_CONSTANT);
       slinky.applyDragForce(D_COEF);
     }
     if (toggles[MAGNETIC]) {
