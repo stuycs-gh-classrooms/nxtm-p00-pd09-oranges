@@ -59,7 +59,6 @@ F = qvBsin(theta)
   - In order to calculate this force, do you need to perform extra intermediary calculations? If so, what?
   - The angle θ must be computed using PVector.angleBetween().
   - The force direction follows the right-hand rule (perpendicular to velocity and field direction).
-
 --- 
 
 ### Simulation 1: Gravity
