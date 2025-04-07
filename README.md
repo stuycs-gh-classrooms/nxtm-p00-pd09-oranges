@@ -27,38 +27,30 @@ All projects will require the following:
 ## Phase 0: Force Selection, Analysis & Plan
 ---------- 
 
-#### Custom Force: Magentic force
+#### Custom Force: Electric force
 ### Forumla
 What is the formula for your force? Including descriptions/definitions for the symbols. (You may include a picture of the formula if it is not easily typed.)
-F = qvBsin(theta)
+F = k * q1q2 / r^2 * r-hat
 -𝐹 = Force exerted on the charged orb
--q = Charge of the orb
--𝑣 = Velocity of the orb
--B = Magnetic field strength
--θ = Angle between velocity and magnetic field
+-q1 = Charge of an orb
+-q2 = Charge of another orb
+-k = Coulomb's constant (arbitrary for our code).
+-r^2 = squared distance between the two orbs
+-r-hat = normalized vector between the two orbs.
 
 ### Custom Force
 - What information that is already present in the `Orb` or `OrbNode` classes does this force use?
-  - Velocity: The force depends on the velocity of the orb.
-  - applyForce(): The calculated force will be applied to the orb using this method.
+  - center: for calculating the normalized vector and squared distance.
 
 - Does this force require any new constants, if so what are they and what values will you try initially?
-  - Yes, we will need q for charge, B for magentic field strength, and angle.
-  - (q): Each orb will have a charge in a set range, e.g,. -5 to 5
-  - (B): A constant set by the simulation, e.g., 0.1
-  - θ: Derived from the orb’s velocity direction relative to the field.
-
+  -  E_CONSTANT for the coulomb's constant.
+  - 
 - Does this force require any new information to be added to the `Orb` class? If so, what is it and what data type will you use?
-  - Yes, we will need a charge for each orb, the angle at which each orb is moving, and the magnetic field strength of the fixedOrb.
-  - Charge: (float charge) to store the charge of each orb.
-  - Magnetic Field Strength: (float B) representing environmental magnetic field strength.
+  - Yes, we will need a random charge for each orb and be converted into an int. 
     
 - Does this force interact with other `Orbs`, or is it applied based on the environment?
-  - This force does not require interactions between orbs but depends on their velocity and the ambient magnetic field.
-
-  - In order to calculate this force, do you need to perform extra intermediary calculations? If so, what?
-  - The angle θ must be computed using PVector.angleBetween().
-  - The force direction follows the right-hand rule (perpendicular to velocity and field direction).
+  - This force from one orb interacts with all other orbs in the linked list. It will be interesting to observe more than two orbs applying electrostatic force.
+ 
 --- 
 
 ### Simulation 1: Gravity
@@ -103,6 +95,6 @@ Describe what your Custom force simulation will look like. Explain how it will b
 Describe what your combination simulation will look like. Explain how it will be setup, and how it should behave while running.
 
 - There will be multiple orbs and one fixed orb.
-- Gravity, drag, and spring will be utilized.
-- We expect orbs to move towards the fixed orb while oscillating back and forth between orbs and slowly decelerate. Once the optimal velocity is reached, the orbs will begin orbiting the fixed orb.
+- Gravity, drag, and Electricity will be utilized.
+- I did this last minute. 
 
