@@ -3,7 +3,7 @@ int MIN_SIZE = 10;
 int MAX_SIZE = 60;
 float MIN_MASS = 10;
 float MAX_MASS = 100;
-float G_CONSTANT = 1;
+float G_CONSTANT = 0.1;
 float D_COEF = 1;
 
 int SPRING_LENGTH = 50;
